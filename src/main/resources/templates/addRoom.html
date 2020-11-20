@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <div th:insert="/head::head">  </div>
+  <body>
+
+    
+  <div th:insert="/navbar::navbar">  </div>
+
+    <div class="container">
+      <form class="loginForm" method="post">
+        <h1 class="addSV">Thêm phòng</h1>
+        <table th:object="${add}">
+          <tr>
+            <td colspan="2">
+              <p th:text="${msg}"></p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Số phòng: </p></td>
+            <td><input type="text" name="roomName" th:field="*{sophong}" placeholder="Nhập số phòng"></td>
+          </tr>
+          <tr>
+            <td><p>Loại phòng: </p></td>
+            <td><input type="text" name="roomKind" th:field="*{loaiphong}" placeholder="Nhập loại phòng"></td>
+          </tr>
+          <tr>
+            <td><p>Đơn giá: </p></td>
+            <td><input type="text" name="roomPrice" th:field="*{dongia}" placeholder="Nhập đơn giá"></td>
+          </tr>
+          <tr>
+            <td><p>Số người tối đa: </p></td>
+            <td><input type="text" name="maxRentingperson" th:field="*{songuoi}" placeholder="Nhập số người ở tối đa"></td>
+          </tr>
+        </table>
+        <input type="submit" name="addRoom" value="Thêm">
+        <input type="reset" name="reset" value="Xóa tất cả">
+        <a href="/room"><input type="button" name="goBack" value="Quay lại"></a>
+      </form>
+    </div>
+
+  </body>
+</html>

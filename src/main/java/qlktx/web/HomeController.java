@@ -21,6 +21,6 @@ public class HomeController {
     public String home() {
         // System.out.println("==========> " + myVariable);
         System.out.println("+++++++++++ " + env.getProperty("JAVA_HOME"));
-        return "index";
+        return "home";
     }
 }
