@@ -1,4 +1,4 @@
-package qlktx.data;
+package qlktx;
 
 public class Student {
 
